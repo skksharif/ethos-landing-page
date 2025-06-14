@@ -1,0 +1,437 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  overflow-x: hidden;
+}
+
+.font-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sanskrit {
+  font-family: 'Noto Sans Devanagari', 'Cinzel', serif;
+}
+
+/* Loading Screen Animations */
+#loading-screen {
+  animation: fadeOut 1s ease-in-out 3s forwards;
+}
+
+.rangoli-loader {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.diya-flame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 30px;
+  background: linear-gradient(45deg, #ff6b35, #f7931e, #ffd700);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: flicker 1.5s ease-in-out infinite alternate;
+}
+
+.mandala-spinner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent;
+  border-top: 3px solid #ffd700;
+  border-right: 3px solid #ff6b35;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.mandala-spinner::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border: 2px solid transparent;
+  border-left: 2px solid #800020;
+  border-bottom: 2px solid #e07a5f;
+  border-radius: 50%;
+  animation: spin 3s linear infinite reverse;
+}
+
+@keyframes flicker {
+  0% { transform: translate(-50%, -50%) scale(1) rotate(-2deg); }
+  100% { transform: translate(-50%, -50%) scale(1.1) rotate(2deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Mandala and Cultural Patterns */
+.mandala-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 153, 51, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(128, 0, 32, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+  position: relative;
+}
+
+.mandala-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ff9933' fill-opacity='0.03'%3E%3Cpath d='M30 30c0-11.046-8.954-20-20-20s-20 8.954-20 20 8.954 20 20 20 20-8.954 20-20zm0 0c0 11.046 8.954 20 20 20s20-8.954 20-20-8.954-20-20-20-20 8.954-20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.lotus-pattern {
+  background-image: 
+    radial-gradient(circle at 30% 70%, rgba(255, 153, 51, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(128, 0, 32, 0.08) 0%, transparent 40%);
+}
+
+.temple-border {
+  border-image: linear-gradient(45deg, #ff9933, #800020, #ffd700, #e07a5f) 1;
+  position: relative;
+}
+
+.temple-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff9933, #800020, #ffd700, #e07a5f);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ff9933, #800020, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-sanskrit-gradient {
+  background: linear-gradient(135deg, #800020, #ff9933, #ffd700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-indian-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(255, 153, 51, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 75% 75%, rgba(128, 0, 32, 0.1) 0%, transparent 25%),
+    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+}
+
+.ayurvedic-texture {
+  background-image: 
+    linear-gradient(45deg, rgba(255, 153, 51, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(128, 0, 32, 0.05) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 215, 0, 0.05) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(224, 122, 95, 0.05) 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+.hover-scale {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(128, 0, 32, 0.2);
+}
+
+.service-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 153, 51, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 153, 51, 0.02), rgba(128, 0, 32, 0.02));
+  pointer-events: none;
+}
+
+.location-card {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.08), rgba(128, 0, 32, 0.08));
+  position: relative;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.12), rgba(255, 153, 51, 0.12));
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: '🕉️';
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  opacity: 0.1;
+}
+
+/* Parallax Effects */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-element {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Chakra and Spiritual Elements */
+.chakra-symbol {
+  position: relative;
+}
+
+.chakra-symbol::before {
+  content: '🕉️';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 1.2rem;
+  opacity: 0.3;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.lotus-symbol {
+  position: relative;
+}
+
+.lotus-symbol::before {
+  content: '🪷';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  font-size: 1rem;
+  opacity: 0.4;
+  animation: float 4s ease-in-out infinite;
+}
+
+.kalash-symbol {
+  position: relative;
+}
+
+.kalash-symbol::before {
+  content: '🏺';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  font-size: 1rem;
+  opacity: 0.4;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.4;
+    filter: brightness(1);
+  }
+  100% {
+    opacity: 0.8;
+    filter: brightness(1.3);
+  }
+}
+
+/* Sanskrit Text Styling */
+.sanskrit-verse {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+}
+
+.sanskrit-small {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Smooth Page Transitions */
+.page-transition {
+  animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Button with Sacred Geometry */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+  transition: all 0.6s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cta-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Spiritual Healing Animations */
+.healing-aura {
+  position: relative;
+}
+
+.healing-aura::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, rgba(255, 153, 51, 0.2), rgba(128, 0, 32, 0.2), rgba(255, 215, 0, 0.2));
+  border-radius: inherit;
+  z-index: -1;
+  animation: auraGlow 3s ease-in-out infinite;
+}
+
+@keyframes auraGlow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .sanskrit-verse {
+    font-size: 1rem;
+  }
+  
+  .mandala-pattern::before {
+    opacity: 0.1;
+  }
+}
+
+/* Custom scrollbar with Indian motifs */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(180deg, #fff5e6, #ffeaa7);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff9933, #800020);
+  border-radius: 10px;
+  border: 2px solid #fff5e6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #800020, #ff9933);
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .mandala-spinner,
+  .diya-flame,
+  .healing-aura::before,
+  .chakra-symbol::before,
+  .lotus-symbol::before,
+  .kalash-symbol::before {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .text-gradient,
+  .text-sanskrit-gradient {
+    background: none;
+    -webkit-text-fill-color: initial;
+    color: #000;
+  }
+}
