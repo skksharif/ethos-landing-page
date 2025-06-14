@@ -9,7 +9,7 @@ const ServiceDetail = () => {
 
   if (!service) {
     return (
-      <div className="pt-20 min-h-screen flex items-center justify-center">
+      <div className="pt-5 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Service Not Found</h1>
           <p className="text-gray-600 mb-8">The service you're looking for doesn't exist.</p>
@@ -25,7 +25,7 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,13 +43,6 @@ const ServiceDetail = () => {
       <section className="py-20 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center text-saffron-600 hover:text-saffron-700 mb-6 font-medium"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Services
-            </Link>
             <div className="text-6xl mb-6">{service.icon}</div>
             <h1 className="font-heading text-5xl font-bold text-gray-800 mb-6">
               {service.title}

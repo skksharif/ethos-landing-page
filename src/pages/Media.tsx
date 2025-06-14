@@ -132,9 +132,9 @@ const Media = () => {
     : videos.filter(video => video.category === selectedVideoCategory);
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
+      <section className="py-5 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-heading text-5xl font-bold text-gray-800 mb-6">
             Media <span className="text-gradient">Gallery</span>

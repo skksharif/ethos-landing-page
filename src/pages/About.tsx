@@ -3,9 +3,9 @@ import { Users, Heart, Award, MapPin, Clock, Stethoscope } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="pt-20">
+    <div className="">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
+      <section className="p-5 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8 animate-fade-in">

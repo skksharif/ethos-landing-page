@@ -4,7 +4,7 @@ import { testimonials } from '../data/testimonials';
 
 const Testimonials = () => {
   return (
-    <div className="pt-20">
+    <div className="pt-0">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

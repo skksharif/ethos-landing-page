@@ -9,7 +9,7 @@ const LocationDetail = () => {
 
   if (!location) {
     return (
-      <div className="pt-20 min-h-screen flex items-center justify-center">
+      <div className="pt-0 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Location Not Found</h1>
           <p className="text-gray-600 mb-8">The location you're looking for doesn't exist.</p>
@@ -25,7 +25,7 @@ const LocationDetail = () => {
   }
 
   return (
-    <div className="pt-20">
+    <div className="pt-0">
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,13 +43,7 @@ const LocationDetail = () => {
       <section className="py-20 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <Link
-              to="/locations"
-              className="inline-flex items-center text-saffron-600 hover:text-saffron-700 mb-6 font-medium"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Locations
-            </Link>
+
             <div className="bg-gradient-to-r from-saffron-500 to-maroon-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
               <MapPin className="w-10 h-10 text-white" />
             </div>
