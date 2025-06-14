@@ -9,6 +9,16 @@ import {
   Heart,
   Shield,
   Clock,
+  Handshake,
+  Eye,
+  Target,
+  Baby,
+  User,
+  Zap,
+  Smile,
+  Layers,
+  AlignCenter,
+  ShieldCheck,
 } from "lucide-react";
 import { services } from "../data/services";
 import { locations } from "../data/locations";
@@ -38,94 +48,82 @@ const Home = () => {
   return (
     <div className="overflow-hidden page-transition">
       {/* Sacred Hero Section */}
-      <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-saffron-50 via-gold-50 to-maroon-50 mandala-pattern parallax-container">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/10 to-transparent" />
-
-        {/* Sacred Floating Icons */}
-        <div
-          className="absolute top-16 left-8 text-4xl opacity-20 parallax-element"
-          data-speed="0.3"
-        >
-          🕉️
-        </div>
-        <div
-          className="absolute top-36 right-12 text-3xl opacity-20 parallax-element"
-          data-speed="0.4"
-        >
-          🪷
-        </div>
-        <div
-          className="absolute bottom-32 left-12 text-4xl opacity-20 parallax-element"
-          data-speed="0.2"
-        >
-          🏺
-        </div>
+      <section className="relative min-h-[80vh] flex items-center bg-gradient-to-br from-white via-gray-50 to-sky-50 parallax-container">
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-200/10 to-transparent" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             {/* Left Content */}
             <div className="space-y-6 animate-fade-in">
               <div className="text-center lg:text-left">
-                <h1 className="font-heading text-4xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-gradient">Spiritual</span>
+                <h1 className="font-heading text-4xl lg:text-6xl font-bold leading-tight text-gray-800">
+                  <span className="text-blue-700">Welcome To</span>
                   <br />
-                  <span className="text-gray-800">Dental Care</span>
-                  <br />
-                  <span className="text-saffron-600">Rooted in Heritage</span>
+                  <span className="text-gray-900">Ethos Dental</span>
                 </h1>
+                <h2 className="mt-2 text-xl text-blue-600 font-semibold">
+                  Excellence in Dentistry with Optimum Care
+                </h2>
                 <p className="mt-4 text-base md:text-lg text-gray-700 max-w-xl">
-                  Experience holistic dental healing where ancient Indian wisdom
-                  meets modern excellence. We restore not just your smile, but
-                  your energetic balance through compassionate care.
+                  Ethos Dental is a contemporary dental health centre providing
+                  services across the Telugu states. We are committed to
+                  offering the finest quality oral treatment, unsurpassed in
+                  precision and eminence.
+                </p>
+                <p className="text-sm text-gray-600 max-w-xl mt-2">
+                  More than just dentistry… we also address dental phobias by
+                  prioritizing comfort without compromising care. Currently
+                  operating 4 hospitals across Andhra & Telangana, our network
+                  continues to grow.
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-saffron-500 via-gold-500 to-maroon-500 text-white px-8 py-3 rounded-full font-medium text-base hover:shadow-xl hover:scale-105 transition healing-aura text-center"
+                  className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium text-base hover:shadow-xl hover:scale-105 transition text-center"
                 >
-                  🪷 Start Your Journey{" "}
+                  Book a Consultation{" "}
                   <ArrowRight className="inline-block ml-2 w-4 h-4" />
                 </Link>
                 <Link
-                  to="/services"
-                  className="border-2 border-saffron-500 text-saffron-600 px-8 py-3 rounded-full font-medium text-base hover:bg-saffron-100 transition temple-border text-center"
+                  to="/about"
+                  className="border-2 border-blue-600 text-blue-700 px-8 py-3 rounded-full font-medium text-base hover:bg-blue-50 transition text-center"
                 >
-                  🕉️ View Services
+                  Learn More About Us
                 </Link>
               </div>
 
               <div className="grid grid-cols-3 gap-4 pt-6 text-center text-sm">
                 <div>
-                  <div className="text-2xl font-bold text-saffron-600">15+</div>
-                  <div className="text-gray-600">Years Experience</div>
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-maroon-600">
-                    10,000+
+                  <div className="text-2xl font-bold text-blue-700">4</div>
+                  <div className="text-gray-600">
+                    Hospitals Across Telugu States
                   </div>
-                  <div className="text-gray-600">Smiles Healed</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gold-600">6</div>
-                  <div className="text-gray-600">Healing Centers</div>
+                  <div className="text-2xl font-bold text-blue-700">Finest</div>
+                  <div className="text-gray-600">Clinical Standards</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-blue-700">100%</div>
+                  <div className="text-gray-600">Patient-Focused Comfort</div>
                 </div>
               </div>
             </div>
 
             {/* Right Image Content */}
             <div className="relative animate-slide-up">
-              <div className="relative z-0 bg-white/90 backdrop-blur-md rounded-2xl shadow-2xl p-6 mandala-pattern healing-aura">
+              <div className="relative z-0 bg-white backdrop-blur-md rounded-2xl shadow-2xl p-6">
                 <img
-                  src="https://images.pexels.com/photos/6723523/pexels-photo-6723523.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Spiritual dental environment"
+                  src="https://images.pexels.com/photos/3845767/pexels-photo-3845767.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Ethos Dental clinic"
                   className="w-full h-72 object-cover rounded-xl"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-maroon-500 to-burgundy-500 text-white p-5 rounded-xl shadow-xl text-sm z-99">
+              <div className="absolute -bottom-6 -right-6 bg-blue-700 text-white p-5 rounded-xl shadow-xl text-sm z-10">
                 <h3 className="font-semibold mb-1">Ethos Dental</h3>
-                <p className="opacity-90">Ancient Wisdom • Modern Care</p>
+                <p className="opacity-90">Trusted Care • Modern Facilities</p>
               </div>
             </div>
           </div>
@@ -133,58 +131,62 @@ const Home = () => {
       </section>
 
       {/* Sacred Values Section */}
-      <section className="py-16 bg-white ayurvedic-texture">
+      <section className="py-16 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="font-heading text-3xl font-bold text-gray-800 mb-3">
-              Our Sacred <span className="text-gradient">Principles</span>
+              Our <span className="text-blue-600">Commitment</span>
             </h3>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Rooted in Ayurveda and inspired by Indian wisdom, we offer dental
-              care that nurtures the body, mind, and spirit.
+              At Ethos Dental, we believe in delivering international standards
+              of dental care with compassion, integrity, and clinical
+              excellence.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Principle 1 */}
-            <div className="text-center group bg-gradient-to-br from-gold-50 to-yellow-50 p-8 rounded-2xl border border-gold-100 kalash-symbol hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-saffron-500 to-gold-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="w-8 h-8 text-white" />
+            {/* Mission */}
+            <div className="text-center bg-gray-50 p-8 rounded-2xl border hover:shadow-lg transition">
+              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-saffron-600 mb-2">
-                Compassionate Care
+              <h4 className="text-lg font-semibold text-blue-700 mb-2">
+                Our Mission
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                We treat each patient with warmth and empathy—restoring your
-                smile with the care of family.
+                To bring healthcare of international standards within the reach
+                of every individual. We are committed to achieving excellence in
+                dental care.
               </p>
             </div>
 
-            {/* Principle 2 */}
-            <div className="text-center group bg-gradient-to-br from-gold-50 to-yellow-50 p-8 rounded-2xl border border-gold-100 kalash-symbol hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-maroon-500 to-burgundy-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="w-8 h-8 text-white" />
+            {/* Vision */}
+            <div className="text-center bg-gray-50 p-8 rounded-2xl border hover:shadow-lg transition">
+              <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Eye className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-maroon-600 mb-2">
-                Excellence in Healing
+              <h4 className="text-lg font-semibold text-green-700 mb-2">
+                Our Vision
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Precision, artistry, and global standards come together to
-                ensure elevated care in every detail.
+                To provide a world-class integrated healthcare system with a
+                focus on compassionate, accessible care—especially for
+                underprivileged communities.
               </p>
             </div>
 
-            {/* Principle 3 */}
-            <div className="text-center group bg-gradient-to-br from-gold-50 to-yellow-50 p-8 rounded-2xl border border-gold-100 kalash-symbol hover:shadow-lg transition">
-              <div className="bg-gradient-to-r from-gold-500 to-terracotta-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-white" />
+            {/* Values */}
+            <div className="text-center bg-gray-50 p-8 rounded-2xl border hover:shadow-lg transition">
+              <div className="bg-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Handshake className="w-8 h-8 text-white" />
               </div>
-              <h4 className="text-lg font-semibold text-gold-600 mb-2">
-                Trust & Integrity
+              <h4 className="text-lg font-semibold text-purple-700 mb-2">
+                Our Values
               </h4>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Built on truth and ethics, we communicate transparently and act
-                with integrity in every interaction.
+                Built on principles of truth and dedication. We aim to deliver
+                high-quality, ethical dental care while fostering trust and
+                long-term relationships.
               </p>
             </div>
           </div>
@@ -192,73 +194,100 @@ const Home = () => {
       </section>
 
       {/* Sacred Services Section */}
-      <section className="py-16 bg-gradient-to-br from-orange-50 to-red-50 lotus-pattern">
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h3 className="font-heading text-3xl font-bold text-gray-800 mb-2">
-              Sacred <span className="text-gradient">Healing Services</span>
+              Our <span className="text-blue-600">Treatments</span>
             </h3>
             <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              From routine care to advanced procedures, our expert team offers
-              complete dental solutions with intention and care.
+              From routine care to advanced procedures, we offer comprehensive
+              dental solutions tailored to every patient's needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredServices.map((service, index) => (
-              <Link
-                key={service.id}
-                to={`/services/${service.id}`}
-                className="group p-6 rounded-2xl shadow-md border border-orange-100 bg-white hover:shadow-lg transition-all duration-300"
-                style={{ animationDelay: `${index * 150}ms` }}
+            {[
+              {
+                title: "Dental Implants",
+                desc: "Designed to protect facial bone and restore healthy teeth.",
+                icon: <Smile className="w-7 h-7" />,
+              },
+              {
+                title: "Maxillofacial Surgery",
+                desc: "Precision procedures for facial health and functional recovery.",
+                icon: <User className="w-7 h-7" />,
+              },
+              {
+                title: "Oral Surgery",
+                desc: "Specialized treatment for complex dental and jaw conditions.",
+                icon: <Baby className="w-7 h-7" />,
+              },
+              {
+                title: "Laser Dentistry",
+                desc: "Minimally invasive, drill-free care for comfortable procedures.",
+                icon: <Zap className="w-7 h-7" />,
+              },
+              {
+                title: "Prosthodontics",
+                desc: "Crowns, bridges, and full-mouth restoration for a confident smile.",
+                icon: <Smile className="w-7 h-7" />,
+              },
+              {
+                title: "Endodontics",
+                desc: "Root canal therapy and advanced inner tooth care solutions.",
+                icon: <Layers className="w-7 h-7" />,
+              },
+              {
+                title: "Cosmetic Dentistry",
+                desc: "Enhancing smiles with whitening, veneers, and more.",
+                icon: <Star className="w-7 h-7" />,
+              },
+              {
+                title: "Orthodontics",
+                desc: "Braces and aligners to correct misaligned teeth and jaws.",
+                icon: <AlignCenter className="w-7 h-7" />,
+              },
+              {
+                title: "Pedodontics",
+                desc: "Gentle, effective care for children’s developing teeth.",
+                icon: <Baby className="w-7 h-7" />,
+              },
+              {
+                title: "Periodontics",
+                desc: "Diagnosis and treatment of gum diseases and oral inflammation.",
+                icon: <ShieldCheck className="w-7 h-7" />,
+              },
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="group p-6 rounded-2xl shadow-md border bg-white hover:shadow-xl transition duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <div className="text-4xl group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
-                  </div>
-                  <div className="text-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-300">
-                    {service.spiritualIcon}
-                  </div>
+                  <div className="text-blue-600">{service.icon}</div>
                 </div>
-
-                <h4 className="font-heading text-lg font-semibold text-gray-800 mb-2 group-hover:text-saffron-600 transition-colors duration-300">
+                <h4 className="font-heading text-lg font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-300">
                   {service.title}
                 </h4>
-
-                <p className="text-sm text-gray-600 leading-relaxed mb-3">
-                  {service.spiritualDescription}
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {service.desc}
                 </p>
-
-                <div className="flex items-center text-saffron-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
-                  <span>Discover More</span>
-                  <ArrowRight className="ml-1 w-4 h-4" />
-                </div>
-              </Link>
+              </div>
             ))}
-          </div>
-
-          <div className="text-center mt-10">
-            <Link
-              to="/services"
-              className="inline-block bg-gradient-to-r from-saffron-500 via-gold-500 to-maroon-500 text-white px-6 py-3 rounded-full text-sm font-semibold shadow-md hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            >
-              Explore All Services
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Sacred Locations Section */}
-      <section className="py-20 bg-white mandala-pattern">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Sacred Healing <span className="text-gradient">Centers</span>
+              Our <span className="text-blue-600">Dental Centers</span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With 6 blessed healing centers across the sacred lands of Andhra
-              Pradesh and Telangana, we bring divine dental care closer to your
-              community.
+              Ethos Dental has 6 advanced dental hospitals serving communities
+              across Andhra Pradesh and Telangana.
             </p>
           </div>
 
@@ -267,15 +296,14 @@ const Home = () => {
               <Link
                 key={location.id}
                 to={`/locations/${location.id}`}
-                className="location-card group hover-scale p-8 rounded-3xl shadow-xl border-2 border-orange-100 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group p-8 rounded-3xl shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="flex items-center mb-6">
-                  <div className="bg-gradient-to-r from-saffron-500 to-maroon-500 w-14 h-14 rounded-full flex items-center justify-center mr-4 kalash-symbol">
+                  <div className="bg-blue-600 w-14 h-14 rounded-full flex items-center justify-center mr-4">
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-heading text-xl font-semibold text-gray-800 group-hover:text-saffron-600 transition-colors duration-500">
+                    <h3 className="font-heading text-xl font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
                       {location.name}
                     </h3>
                     <p className="text-sm text-gray-500">{location.city}</p>
@@ -293,12 +321,12 @@ const Home = () => {
                   </div>
                   <div className="flex items-center text-sm text-gray-500">
                     <Users className="w-4 h-4 mr-2" />
-                    {location.services.length} Sacred Services Available
+                    {location.services.length} Services Offered
                   </div>
                 </div>
 
-                <div className="flex items-center text-saffron-600 font-medium group-hover:translate-x-2 transition-transform duration-500">
-                  <span>🏺 Visit Sacred Center</span>
+                <div className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform">
+                  <span>View Location</span>
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </div>
               </Link>
@@ -308,16 +336,16 @@ const Home = () => {
       </section>
 
       {/* Sacred Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50 ayurvedic-texture">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h3 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Sacred <span className="text-gradient">Soul Stories</span>
+              Patient <span className="text-blue">Stories</span>
             </h3>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from blessed souls about their transformative healing
-              journeys at Ethos Dental. Their divine experiences inspire and
-              guide us on the path of compassionate care.
+              Discover how compassionate dental care at Ethos Dental has
+              transformed lives. Hear directly from our patients about their
+              experiences and outcomes.
             </p>
           </div>
 
@@ -325,7 +353,7 @@ const Home = () => {
             {featuredTestimonials.map((testimonial, index) => (
               <div
                 key={testimonial.id}
-                className="testimonial-card hover-scale p-8 rounded-3xl shadow-xl border-2 border-orange-100 bg-white/90 backdrop-blur-md animate-fade-in"
+                className=" hover:scale-105 p-8 rounded-3xl shadow-xl border-2 border-blue-100 bg-white/90 backdrop-blur-md animate-fade-in"
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <div className="flex items-center justify-between mb-6">
@@ -333,11 +361,11 @@ const Home = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-gold-500 fill-current"
+                        className="w-5 h-5 text-blue-500 fill-current"
                       />
                     ))}
                   </div>
-                  <div className="text-2xl opacity-30">🪷</div>
+        
                 </div>
 
                 <p className="text-gray-700 leading-relaxed mb-6 italic">
@@ -360,12 +388,12 @@ const Home = () => {
                   </div>
 
                   <div className="mt-4 flex items-center justify-between">
-                    <span className="bg-saffron-100 text-saffron-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
                       {testimonial.treatment}
                     </span>
                     {testimonial.doctor && (
                       <span className="text-xs text-gray-500">
-                        Blessed by {testimonial.doctor}
+                        Treated by {testimonial.doctor}
                       </span>
                     )}
                   </div>
@@ -377,49 +405,16 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link
               to="/testimonials"
-              className="cta-button bg-gradient-to-r from-saffron-500 via-gold-500 to-maroon-500 text-white px-10 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500"
+              className="cta-button bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 text-white px-10 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500"
             >
-              Read More Sacred Stories
+              Read More Stories
             </Link>
           </div>
         </div>
       </section>
 
       {/* Sacred CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-maroon-1000 via-burgundy-700 to-maroon-800  mandala-pattern">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <h2 className="text-2xl font-semibold mb-3 opacity-90">
-              Ready to Transform Your Sacred Smile?
-            </h2>
-            <p className="text-base md:text-lg max-w-2xl mx-auto opacity-80 mb-6">
-              Join thousands who’ve experienced the harmony of ancient wisdom
-              and modern dental excellence at Ethos Dental.
-            </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-saffron-500 to-gold-500 text-white px-6 py-3 rounded-full font-medium text-sm hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Begin Your Consultation
-            </Link>
-            <Link
-              to="/locations"
-              className="border border-gold px-6 py-3 rounded-full font-medium text-sm hover:bg-white hover:text-maroon-700 transition-all duration-300"
-            >
-              Find a Location
-            </Link>
-          </div>
-
-          <div className="mt-6">
-            <p className="text-sm italic opacity-70">
-              "Dental care is the foundation of well-being"
-            </p>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

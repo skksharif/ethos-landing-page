@@ -72,20 +72,20 @@ const PatientEducation = () => {
   const categories = ['All', 'Prevention', 'Treatment', 'Post-Treatment', 'Special Care'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-  const filteredTopics = selectedCategory === 'All' 
-    ? educationTopics 
+  const filteredTopics = selectedCategory === 'All'
+    ? educationTopics
     : educationTopics.filter(topic => topic.category === selectedCategory);
 
   return (
     <div className="pt-0">
       {/* Hero Section */}
-      <section className="py-5 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
+      <section className="py-5 bg-gradient-to-br from-sky-50 via-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-r from-saffron-500 to-maroon-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
+          <div className="bg-gradient-to-r from-sky-500 to-indigo-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6">
             <BookOpen className="w-10 h-10 text-white" />
           </div>
           <h1 className="font-heading text-5xl font-bold text-gray-800 mb-6">
-            Patient <span className="text-gradient">Education</span>
+            Patient <span className="">Education</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Empowering you with knowledge about dental health, treatments, and preventive care. 
@@ -104,8 +104,8 @@ const PatientEducation = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   selectedCategory === category
-                    ? 'bg-gradient-to-r from-saffron-500 to-maroon-500 text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-saffron-50 hover:text-saffron-600'
+                    ? 'bg-gradient-to-r from-sky-500 to-indigo-600 text-white shadow-lg'
+                    : 'bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600'
                 }`}
               >
                 {category}
@@ -122,32 +122,32 @@ const PatientEducation = () => {
             {filteredTopics.map((topic, index) => (
               <div
                 key={topic.id}
-                className="bg-gradient-to-br from-white to-saffron-50 rounded-2xl shadow-lg border border-orange-100 overflow-hidden hover-scale group animate-fade-in"
+                className="bg-gradient-to-br from-white to-blue-50 rounded-2xl shadow-lg border border-blue-100 overflow-hidden hover-scale group animate-fade-in"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-4xl">{topic.icon}</div>
-                    <span className="bg-saffron-100 text-saffron-700 px-3 py-1 rounded-full text-xs font-medium">
+                    <span className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
                       {topic.category}
                     </span>
                   </div>
-                  
-                  <h3 className="font-heading text-xl font-semibold text-gray-800 mb-3 group-hover:text-saffron-600 transition-colors duration-300">
+
+                  <h3 className="font-heading text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {topic.title}
                   </h3>
-                  
+
                   <p className="text-gray-600 leading-relaxed mb-4 text-sm">
                     {topic.description}
                   </p>
-                  
+
                   <p className="text-gray-700 text-sm leading-relaxed mb-6">
                     {topic.content}
                   </p>
-                  
+
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-gray-500">{topic.readTime}</span>
-                    <button className="flex items-center text-saffron-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
+                    <button className="flex items-center text-blue-600 font-medium group-hover:translate-x-2 transition-transform duration-300">
                       Read More
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </button>
@@ -160,11 +160,11 @@ const PatientEducation = () => {
       </section>
 
       {/* Oral Health Tips */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Essential <span className="text-gradient">Oral Health Tips</span>
+              Essential <span className="">Oral Health Tips</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Simple daily practices that can make a significant difference in your oral health.
@@ -172,45 +172,20 @@ const PatientEducation = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center group hover-scale bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-              <div className="bg-gradient-to-r from-saffron-500 to-gold-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <Heart className="w-8 h-8 text-white" />
+            {[
+              { icon: <Heart />, title: 'Daily Brushing', desc: 'Brush twice daily with fluoride toothpaste for at least 2 minutes to remove plaque and prevent decay.', gradient: 'from-sky-500 to-indigo-500' },
+              { icon: <Shield />, title: 'Regular Flossing', desc: 'Floss daily to remove plaque and food particles between teeth where your toothbrush can’t reach.', gradient: 'from-indigo-500 to-blue-700' },
+              { icon: <Smile />, title: 'Regular Checkups', desc: 'Visit your dentist every 6 months for professional cleaning and early detection of problems.', gradient: 'from-blue-500 to-sky-700' },
+              { icon: <Baby />, title: 'Healthy Diet', desc: 'Limit sugary and acidic foods. Choose tooth-friendly foods rich in calcium and vitamins.', gradient: 'from-blue-700 to-indigo-500' }
+            ].map((tip, idx) => (
+              <div key={idx} className="text-center group hover-scale bg-white p-8 rounded-2xl shadow-lg border border-blue-100">
+                <div className={`bg-gradient-to-r ${tip.gradient} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300`}>
+                  {React.cloneElement(tip.icon, { className: "w-8 h-8 text-white" })}
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">{tip.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{tip.desc}</p>
               </div>
-              <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">Daily Brushing</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Brush twice daily with fluoride toothpaste for at least 2 minutes to remove plaque and prevent decay.
-              </p>
-            </div>
-
-            <div className="text-center group hover-scale bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-              <div className="bg-gradient-to-r from-maroon-500 to-burgundy-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">Regular Flossing</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Floss daily to remove plaque and food particles between teeth where your toothbrush can't reach.
-              </p>
-            </div>
-
-            <div className="text-center group hover-scale bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-              <div className="bg-gradient-to-r from-gold-500 to-terracotta-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <Smile className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">Regular Checkups</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Visit your dentist every 6 months for professional cleaning and early detection of problems.
-              </p>
-            </div>
-
-            <div className="text-center group hover-scale bg-white p-8 rounded-2xl shadow-lg border border-orange-100">
-              <div className="bg-gradient-to-r from-terracotta-500 to-saffron-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
-                <Baby className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">Healthy Diet</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Limit sugary and acidic foods. Choose tooth-friendly foods rich in calcium and vitamins.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -220,7 +195,7 @@ const PatientEducation = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Frequently Asked <span className="text-gradient">Questions</span>
+              Frequently Asked <span className="">Questions</span>
             </h2>
             <p className="text-xl text-gray-600">
               Common questions about dental health and treatments.
@@ -231,22 +206,22 @@ const PatientEducation = () => {
             {[
               {
                 question: "How often should I visit the dentist?",
-                answer: "We recommend visiting the dentist every 6 months for routine checkups and cleanings. However, some patients may need more frequent visits based on their oral health condition."
+                answer: "We recommend visiting the dentist every 6 months for routine checkups and cleanings..."
               },
               {
                 question: "Are dental implants painful?",
-                answer: "Most patients experience minimal discomfort during and after dental implant surgery. Local anesthesia is used during the procedure, and any post-operative discomfort can be managed with prescribed medications."
+                answer: "Most patients experience minimal discomfort during and after dental implant surgery..."
               },
               {
                 question: "How long do dental implants last?",
-                answer: "With proper care and maintenance, dental implants can last 20-30 years or even a lifetime. Regular dental checkups and good oral hygiene are essential for their longevity."
+                answer: "With proper care, dental implants can last 20–30 years or even a lifetime..."
               },
               {
                 question: "Is teeth whitening safe?",
-                answer: "Professional teeth whitening performed by qualified dentists is safe and effective. We use clinically proven methods that minimize sensitivity while achieving excellent results."
+                answer: "Professional teeth whitening performed by qualified dentists is safe and effective..."
               }
-            ].map((faq, index) => (
-              <div key={index} className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-2xl p-8 border border-saffron-100">
+            ].map((faq, idx) => (
+              <div key={idx} className="bg-gradient-to-br from-blue-50 to-sky-100 rounded-2xl p-8 border border-blue-100">
                 <h3 className="font-heading text-xl font-semibold text-gray-800 mb-4">{faq.question}</h3>
                 <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
               </div>
@@ -256,25 +231,24 @@ const PatientEducation = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 via-burgundy-600 to-maroon-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-blue-800 via-indigo-700 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-heading text-4xl font-bold mb-6">
             Have More Questions?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Our expert dental team is here to answer all your questions and provide personalized guidance 
-            for your oral health needs.
+            Our expert dental team is here to answer all your questions and provide personalized guidance for your oral health needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-saffron-500 to-gold-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
+              className="bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               Ask Our Experts
             </Link>
             <Link
               to="/locations"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-maroon-600 transition-all duration-300"
+              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-blue-800 transition-all duration-300"
             >
               Find a Location
             </Link>

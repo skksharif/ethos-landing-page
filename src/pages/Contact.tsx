@@ -61,10 +61,10 @@ const Contact = () => {
   return (
     <div className="pt-0">
       {/* Hero Section */}
-      <section className="py-5 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
+      <section className="py-5 bg-gradient-to-br from-blue-50 via-aliceblue-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-heading text-5xl font-bold text-gray-800 mb-6">
-            Contact <span className="text-gradient">Us</span>
+            Contact <span className="">Us</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to experience exceptional dental care? Get in touch with us to schedule your appointment 
@@ -74,11 +74,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-10 bg-white">
+        <div className="max-w-7xl mx-auto  px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-gradient-to-br from-saffron-50 to-orange-50 rounded-3xl p-8 md:p-12 border border-saffron-100">
+            <div className="bg-gradient-to-br from-blue-50 to-aliceblue-50 rounded-3xl p-8 md:p-12 border border-blue-100">
               <h2 className="font-heading text-3xl font-bold text-gray-800 mb-8">
                 Schedule Your Appointment
               </h2>
@@ -110,7 +110,7 @@ const Contact = () => {
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -126,7 +126,7 @@ const Contact = () => {
                         required
                         value={formData.phone}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -159,7 +159,7 @@ const Contact = () => {
                         required
                         value={formData.location}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       >
                         <option value="">Select a location</option>
                         {locations.map((location) => (
@@ -180,7 +180,7 @@ const Contact = () => {
                         required
                         value={formData.service}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       >
                         <option value="">Select a service</option>
                         {services.map((service) => (
@@ -204,7 +204,7 @@ const Contact = () => {
                         value={formData.preferredDate}
                         onChange={handleInputChange}
                         min={new Date().toISOString().split('T')[0]}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       />
                     </div>
 
@@ -217,7 +217,7 @@ const Contact = () => {
                         name="preferredTime"
                         value={formData.preferredTime}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       >
                         <option value="">Select time</option>
                         <option value="9:00 AM">9:00 AM</option>
@@ -244,14 +244,14 @@ const Contact = () => {
                       rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-saffron-500 focus:border-transparent transition-all duration-200"
+                      className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       placeholder="Tell us about your dental concerns or any specific requirements..."
                     ></textarea>
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-saffron-500 to-maroon-500 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-500 text-white py-4 px-8 rounded-xl font-semibold text-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <Send className="w-5 h-5" />
                     <span>Schedule Appointment</span>
@@ -273,23 +273,23 @@ const Contact = () => {
               </div>
 
               {/* Quick Contact */}
-              <div className="bg-gradient-to-br from-maroon-50 to-red-50 rounded-2xl p-8 border border-maroon-100">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-50 rounded-2xl p-8 border border-blue-100">
                 <h3 className="font-heading text-xl font-semibold text-gray-800 mb-6">Quick Contact</h3>
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="bg-gradient-to-r from-saffron-500 to-gold-500 w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-gradient-to-r from-blue-500 to-aliceblue-500 w-12 h-12 rounded-full flex items-center justify-center">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <p className="text-sm text-gray-600">Emergency Line</p>
-                      <a href="tel:+919705859606" className="text-lg font-semibold text-gray-800 hover:text-saffron-600 transition-colors duration-200">
+                      <a href="tel:+919705859606" className="text-lg font-semibold text-gray-800 hover:text-blue-600 duration-200">
                         +91-9705859606
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="bg-gradient-to-r from-maroon-500 to-burgundy-500 w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-gradient-to-r from-blue-500 to-aliceblue-500 w-12 h-12 rounded-full flex items-center justify-center">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -301,7 +301,7 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center space-x-4">
-                    <div className="bg-gradient-to-r from-gold-500 to-terracotta-500 w-12 h-12 rounded-full flex items-center justify-center">
+                    <div className="bg-gradient-to-r from-blue-500 to-aliceblue-500 w-12 h-12 rounded-full flex items-center justify-center">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -314,73 +314,26 @@ const Contact = () => {
               </div>
 
               {/* Emergency Contact */}
-              <div className="bg-gradient-to-r from-red-500 to-red-600 rounded-2xl p-8 text-white">
+              <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl p-8 text-white">
                 <h3 className="font-heading text-xl font-semibold mb-4">Dental Emergency?</h3>
-                <p className="text-red-100 mb-6 text-sm">
+                <p className="text-blue-100 mb-6 text-sm">
                   If you're experiencing a dental emergency, don't wait. Contact us immediately for urgent care.
                 </p>
                 <a
                   href="tel:+919705859606"
-                  className="bg-white text-red-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
+                  className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2"
                 >
                   <Phone className="w-4 h-4" />
                   <span>Call Emergency Line</span>
                 </a>
               </div>
 
-              {/* Location Summary */}
-              <div className="bg-gradient-to-br from-gold-50 to-yellow-50 rounded-2xl p-8 border border-gold-100">
-                <h3 className="font-heading text-xl font-semibold text-gray-800 mb-6">Our Locations</h3>
-                <div className="space-y-4">
-                  {locations.slice(0, 3).map((location) => (
-                    <div key={location.id} className="flex items-start space-x-3">
-                      <MapPin className="w-5 h-5 text-gold-600 mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="font-medium text-gray-800">{location.name}</p>
-                        <p className="text-sm text-gray-600">{location.phone[0]}</p>
-                      </div>
-                    </div>
-                  ))}
-                  <a
-                    href="/locations"
-                    className="text-gold-600 hover:text-gold-700 font-medium text-sm inline-flex items-center space-x-1 mt-4"
-                  >
-                    <span>View All Locations</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Find Us <span className="text-gradient">Nearby</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              With 6 convenient locations across Andhra Pradesh and Telangana, 
-              quality dental care is always within reach.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-3xl shadow-lg p-8 border border-orange-100">
-            <div className="aspect-video bg-gray-200 rounded-2xl flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600 text-lg font-medium">Interactive Map</p>
-                <p className="text-gray-500 text-sm">Find the nearest Ethos Dental location</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </div>
   );
 };

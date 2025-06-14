@@ -31,16 +31,7 @@ const Header = () => {
 
   return (
     <>
-      {/* Top Info Bar */}
-      <div className="bg-gradient-to-r from-maroon-600 to-maroon-700 text-white py-2 text-xs px-4">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex gap-4">
-            <div className="flex items-center gap-1"><Phone className="w-4 h-4" /> +91-9705859606</div>
-            <div className="flex items-center gap-1"><MapPin className="w-4 h-4" /> 6 Clinics in AP & TS</div>
-          </div>
-          <div className="hidden md:block italic text-sanskrit">🕉️ Root of health is dental care 🪷</div>
-        </div>
-      </div>
+
 
       {/* Main Header */}
       <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 shadow border-b' : 'bg-white/90'} backdrop-blur`}>
@@ -49,11 +40,10 @@ const Header = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="p-3 bg-gradient-to-br from-saffron-500 to-maroon-500 rounded-xl text-white text-xl font-sanskrit shadow">ॐ</div>
-              <div>
-                <h1 className="text-lg font-bold">Ethos Dental</h1>
-                <p className="text-[10px] text-gray-500 -mt-1">Ayurvedic Oral Healing</p>
+              <div className="p-3 w-[200px]">
+                 <img src='/ethos-dental.png' className='w-[100%]'/>
               </div>
+           
             </Link>
 
             {/* Desktop Nav */}
@@ -62,7 +52,7 @@ const Header = () => {
                 <Link
                   key={to}
                   to={to}
-                  className={`hover:text-saffron-500 ${location.pathname === to ? 'text-saffron-500' : 'text-gray-700'}`}
+                  className={`hover:text-blue-500 ${location.pathname === to ? 'text-blue-500' : 'text-gray-700'}`}
                 >
                   {label}
                 </Link>
@@ -74,19 +64,19 @@ const Header = () => {
                 onMouseEnter={() => setActiveDropdown('services')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center gap-1 text-gray-700 hover:text-saffron-500">
+                <button className="flex items-center gap-1 text-gray-700 hover:text-blue-500">
                   Services <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === 'services' && (
                   <div className="absolute left-0 mt-0 w-80 bg-white shadow-lg rounded-lg p-4 z-50">
-                    <h3 className="text-maroon-600 font-semibold mb-2">🪷 Healing Services</h3>
+                    <h3 className="text-blue-600 font-semibold mb-2">🪷 Healing Services</h3>
                     <div className="space-y-2 max-h-64 overflow-y-auto text-sm">
                       {services.map(service => (
                         <Link
                           key={service.id}
                           to={`/services/${service.id}`}
                           onClick={closeMenu}
-                          className="block hover:text-saffron-600"
+                          className="block hover:text-blue-600"
                         >
                           {service.icon} {service.title}
                         </Link>
@@ -102,19 +92,19 @@ const Header = () => {
                 onMouseEnter={() => setActiveDropdown('locations')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center gap-1 text-gray-700 hover:text-saffron-500">
+                <button className="flex items-center gap-1 text-gray-700 hover:text-blue-500">
                   Locations <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === 'locations' && (
                   <div className="absolute left-0 mt-0 w-72 bg-white shadow-lg rounded-lg p-4 z-50">
-                    <h3 className="text-maroon-600 font-semibold mb-2">🏺 Our Clinics</h3>
+                    <h3 className="text-blue-600 font-semibold mb-2">🏺 Our Clinics</h3>
                     <div className="space-y-2 text-sm">
                       {locations.map(loc => (
                         <Link
                           key={loc.id}
                           to={`/locations/${loc.id}`}
                           onClick={closeMenu}
-                          className="block hover:text-saffron-600"
+                          className="block hover:text-blue-600"
                         >
                           {loc.name}
                         </Link>
@@ -130,20 +120,20 @@ const Header = () => {
                 onMouseEnter={() => setActiveDropdown('media')}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <button className="flex items-center gap-1 text-gray-700 hover:text-saffron-500">
+                <button className="flex items-center gap-1 text-gray-700 hover:text-blue-500">
                   Media <ChevronDown className="w-4 h-4" />
                 </button>
                 {activeDropdown === 'media' && (
                   <div className="absolute left-0 mt-0 w-48 bg-white shadow-lg rounded-lg p-3 z-50 text-sm">
-                    <Link to="/media?tab=images" onClick={closeMenu} className="block py-1 hover:text-saffron-600">🖼️ Images</Link>
-                    <Link to="/media?tab=videos" onClick={closeMenu} className="block py-1 hover:text-saffron-600">🎥 Videos</Link>
+                    <Link to="/media?tab=images" onClick={closeMenu} className="block py-1 hover:text-blue-600">🖼️ Images</Link>
+                    <Link to="/media?tab=videos" onClick={closeMenu} className="block py-1 hover:text-blue-600">🎥 Videos</Link>
                   </div>
                 )}
               </div>
 
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-saffron-500 to-maroon-500 text-white px-4 py-2 rounded-full text-sm hover:scale-105 transition"
+                className="bg-gradient-to-r from-blue-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm hover:scale-105 transition"
               >
                 Contact
               </Link>
@@ -164,7 +154,7 @@ const Header = () => {
                 key={to}
                 to={to}
                 onClick={closeMenu}
-                className="block py-2 text-gray-700 hover:text-saffron-500"
+                className="block py-2 text-gray-700 hover:text-blue-500"
               >
                 {label}
               </Link>
@@ -174,7 +164,7 @@ const Header = () => {
             <div>
               <button
                 onClick={() => setActiveDropdown(activeDropdown === 'services' ? null : 'services')}
-                className="flex justify-between w-full py-2 text-gray-700 hover:text-saffron-500"
+                className="flex justify-between w-full py-2 text-gray-700 hover:text-blue-500"
               >
                 🦷 Services <ChevronDown className={`w-4 h-4 ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
@@ -185,12 +175,12 @@ const Header = () => {
                       key={service.id}
                       to={`/services/${service.id}`}
                       onClick={closeMenu}
-                      className="block text-gray-600 hover:text-saffron-500"
+                      className="block text-gray-600 hover:text-blue-500"
                     >
                       {service.icon} {service.title}
                     </Link>
                   ))}
-                  <Link to="/services" onClick={closeMenu} className="text-saffron-500 font-medium">View All →</Link>
+                  <Link to="/services" onClick={closeMenu} className="text-blue-500 font-medium">View All →</Link>
                 </div>
               )}
             </div>
@@ -198,7 +188,7 @@ const Header = () => {
             <Link
               to="/contact"
               onClick={closeMenu}
-              className="mt-4 block bg-gradient-to-r from-saffron-500 to-maroon-500 text-white text-center py-3 rounded-full"
+              className="mt-4 block bg-gradient-to-r from-blue-500 to-blue-500 text-white text-center py-3 rounded-full"
             >
               Contact Us
             </Link>

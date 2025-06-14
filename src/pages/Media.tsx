@@ -134,10 +134,10 @@ const Media = () => {
   return (
     <div className="pt-0">
       {/* Hero Section */}
-      <section className="py-5 bg-gradient-to-br from-saffron-50 via-orange-50 to-red-50 bg-indian-pattern">
+      <section className="py-5 bg-gradient-to-br from-blue-50 via-blue-50 to-blue-50 ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-heading text-5xl font-bold text-gray-800 mb-6">
-            Media <span className="text-gradient">Gallery</span>
+            Media <span className="">Gallery</span>
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Explore our collection of images and videos showcasing our state-of-the-art facilities, 
@@ -154,8 +154,8 @@ const Media = () => {
               onClick={() => setActiveTab('images')}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeTab === 'images'
-                  ? 'bg-gradient-to-r from-saffron-500 to-maroon-500 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-saffron-50 hover:text-saffron-600'
+                  ? 'bg-gradient-to-r from-blue-500 to-blue--500 text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <Image className="w-5 h-5" />
@@ -165,8 +165,8 @@ const Media = () => {
               onClick={() => setActiveTab('videos')}
               className={`flex items-center space-x-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 activeTab === 'videos'
-                  ? 'bg-gradient-to-r from-saffron-500 to-maroon-500 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-700 hover:bg-saffron-50 hover:text-saffron-600'
+                  ? 'bg-gradient-to-r from-blue-500 to-blue--500 text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600'
               }`}
             >
               <Video className="w-5 h-5" />
@@ -189,8 +189,8 @@ const Media = () => {
                     onClick={() => setSelectedImageCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedImageCategory === category
-                        ? 'bg-saffron-500 text-white shadow-md'
-                        : 'bg-white text-gray-700 hover:bg-saffron-50 hover:text-saffron-600 border border-gray-200'
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
                     }`}
                   >
                     {category}
@@ -227,14 +227,14 @@ const Media = () => {
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
-                        <span className="bg-saffron-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-medium">
                           {image.category}
                         </span>
                       </div>
                     </div>
                     
                     <div className="p-4">
-                      <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-saffron-600 transition-colors duration-200">
+                      <h3 className="font-semibold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors duration-200">
                         {image.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
@@ -262,8 +262,8 @@ const Media = () => {
                     onClick={() => setSelectedVideoCategory(category)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                       selectedVideoCategory === category
-                        ? 'bg-saffron-500 text-white shadow-md'
-                        : 'bg-white text-gray-700 hover:bg-saffron-50 hover:text-saffron-600 border border-gray-200'
+                        ? 'bg-blue-500 text-white shadow-md'
+                        : 'bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 border border-gray-200'
                     }`}
                   >
                     {category}
@@ -290,12 +290,12 @@ const Media = () => {
                         className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                        <div className="bg-gradient-to-r from-saffron-500 to-maroon-500 w-16 h-16 rounded-full flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300 group-hover:scale-110">
+                        <div className="bg-gradient-to-r from-blue-500 to-blue--500 w-16 h-16 rounded-full flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300 group-hover:scale-110">
                           <Play className="w-6 h-6 text-white ml-1" />
                         </div>
                       </div>
                       <div className="absolute top-4 left-4">
-                        <span className="bg-maroon-500 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        <span className="bg-blue--500 text-white px-3 py-1 rounded-full text-xs font-medium">
                           {video.category}
                         </span>
                       </div>
@@ -307,7 +307,7 @@ const Media = () => {
                     </div>
                     
                     <div className="p-6">
-                      <h3 className="font-heading text-xl font-semibold text-gray-800 mb-3 group-hover:text-saffron-600 transition-colors duration-200">
+                      <h3 className="font-heading text-xl font-semibold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-200">
                         {video.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
@@ -322,98 +322,8 @@ const Media = () => {
         </>
       )}
 
-      {/* Featured Content */}
-      <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl font-bold text-gray-800 mb-6">
-              Featured <span className="text-gradient">Content</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Highlighted media showcasing our expertise and patient success stories.
-            </p>
-          </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100">
-                <h3 className="font-heading text-2xl font-semibold text-gray-800 mb-4">
-                  Virtual Clinic Tours
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Take a virtual tour of our state-of-the-art facilities across all locations. 
-                  See our modern equipment, comfortable patient areas, and meet our expert team.
-                </p>
-                <button className="bg-gradient-to-r from-saffron-500 to-maroon-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                  Watch Tour Videos
-                </button>
-              </div>
-
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-orange-100">
-                <h3 className="font-heading text-2xl font-semibold text-gray-800 mb-4">
-                  Patient Success Stories
-                </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  Watch real patients share their transformation journeys and experiences 
-                  with our dental treatments. Their stories inspire and inform.
-                </p>
-                <button className="bg-gradient-to-r from-maroon-500 to-burgundy-500 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300">
-                  View Testimonials
-                </button>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-3xl shadow-lg p-8 border border-orange-100">
-              <div className="aspect-video bg-gray-200 rounded-2xl mb-6 flex items-center justify-center relative overflow-hidden">
-                <img
-                  src="https://images.pexels.com/photos/4269291/pexels-photo-4269291.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Featured video thumbnail"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                  <div className="bg-gradient-to-r from-saffron-500 to-maroon-500 w-20 h-20 rounded-full flex items-center justify-center cursor-pointer hover:shadow-lg transition-all duration-300">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                </div>
-              </div>
-              <h3 className="font-heading text-xl font-semibold text-gray-800 mb-3">
-                Complete Smile Makeover Journey
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Follow a patient's complete smile transformation from consultation to final results. 
-                See how our comprehensive approach delivers life-changing results.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-maroon-600 via-burgundy-600 to-maroon-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-heading text-4xl font-bold mb-6">
-            Ready to Create Your Success Story?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-            Join the thousands of patients who have transformed their smiles with us. 
-            Schedule your consultation today and begin your journey to optimal oral health.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="bg-gradient-to-r from-saffron-500 to-gold-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              Schedule Consultation
-            </a>
-            <a
-              href="/locations"
-              className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-maroon-600 transition-all duration-300"
-            >
-              Find a Location
-            </a>
-          </div>
-        </div>
-      </section>
+ 
     </div>
   );
 };
