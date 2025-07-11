@@ -311,10 +311,12 @@ const Services: React.FC = () => {
               >
                 Our experts are here to help you choose the right treatment
               </motion.p>
-              <motion.button
+              <motion.a
+                 href="tel:+919876543210"
                 className="bg-yellow-400 text-maroon-800 px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition-colors duration-300 shadow-lg"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={
                   inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
@@ -322,7 +324,7 @@ const Services: React.FC = () => {
                 transition={{ delay: 1.4, duration: 0.6 }}
               >
                 Consult Our Experts
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         </motion.div>

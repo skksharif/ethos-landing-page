@@ -109,12 +109,12 @@ const Hero: React.FC = () => {
             {/* CTA Buttons */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
-              variants={itemVariants}
-            >
+              variants={itemVariants}>
               <motion.button 
                 className="bg-gradient-to-r from-maroon-800 to-maroon-600 text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl transform transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => window.location.href = '#contact'}
               >
                 {t('hero.cta1')}
               </motion.button>
@@ -122,6 +122,7 @@ const Hero: React.FC = () => {
                 className="border-2 border-maroon-800 text-maroon-800 px-8 py-4 rounded-full font-semibold hover:bg-maroon-800 hover:text-white transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => window.location.href = '#branches'}
               >
                 {t('hero.cta2')}
               </motion.button>
