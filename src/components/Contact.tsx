@@ -387,7 +387,7 @@ const Contact: React.FC = () => {
                     </div>
                   </motion.a>
                   <motion.a
-                    href="mailto:info@ethosdental.com"
+                    href="mailto:contact@ethos.dental"
                     className="flex items-center space-x-4 p-4 bg-white/10 rounded-2xl hover:bg-white/20 transition-colors duration-300"
                     whileHover={{ scale: 1.02, x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
