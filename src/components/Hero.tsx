@@ -88,22 +88,20 @@ const Hero: React.FC = () => {
                 <span className="text-sm font-medium tracking-wide">Excellence Since 2015</span>
               </motion.div>
               
-              <motion.h1 
+              <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-maroon-800 leading-tight"
-                variants={itemVariants}
-                style={{ fontFamily: "'Poppins', sans-serif" }}
               >
                 <span className="bg-gradient-to-r from-maroon-800 via-maroon-600 to-yellow-600 bg-clip-text text-transparent">
                   {t('hero.title')}
                 </span>
-              </motion.h1>
+              </h2>
               
-              <motion.p 
+              <h1
                 className="text-xl text-gray-600 leading-relaxed font-medium"
-                variants={itemVariants}
+             
               >
                 {t('hero.subtitle')}
-              </motion.p>
+              </h1>
             </div>
 
             {/* CTA Buttons */}
