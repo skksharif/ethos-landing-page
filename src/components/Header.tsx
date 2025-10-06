@@ -59,14 +59,12 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <motion.div 
+          <h1 
             className="flex items-center space-x-3"
-            whileHover={{ scale: 1.05 }}
-            transition={{ type: "spring", stiffness: 300 }}
           >
      
               <img src="/ethos-dental.png" alt="ethos-dental logo" className='w-[100%] h-[60px]' />
-          </motion.div>
+          </h1>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
