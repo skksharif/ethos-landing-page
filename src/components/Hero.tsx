@@ -85,16 +85,16 @@ const Hero: React.FC = () => {
                 variants={itemVariants}
               >
                 <Star className="w-5 h-5 fill-current" />
-                <span className="text-sm font-medium tracking-wide">Excellence Since 2015</span>
+                <h1 className="text-sm font-medium tracking-wide">Excellence Since 2015</h1>
               </motion.div>
               
-              <h2
+              <div
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-maroon-800 leading-tight"
               >
-                <span className="bg-gradient-to-r from-maroon-800 via-maroon-600 to-yellow-600 bg-clip-text text-transparent">
+                <h2 className="bg-gradient-to-r from-maroon-800 via-maroon-600 to-yellow-600 bg-clip-text text-transparent">
                   {t('hero.title')}
-                </span>
-              </h2>
+                </h2>
+              </div>
               
               <h1
                 className="text-xl text-gray-600 leading-relaxed font-medium"
